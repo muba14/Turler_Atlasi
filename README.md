@@ -1,2 +1,2 @@
-# T-rler-Atlas-
+# Turler-Atlasi-
 So many animals, trees, flowers. Do you know species all of them ? 
