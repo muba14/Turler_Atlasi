@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr" data-tema="koyu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Türler Atlası</title>
+  <meta name="description" content="Ağaç türlerini, kedi ve köpek ırklarını ve kuş türlerini fotoğraflarıyla anlatan Türkçe/İngilizce atlas.">
+  <script>
+    // Sayfa açılırken temanın yanıp sönmemesi için kayıtlı temayı hemen uygula
+    try { if (JSON.parse(localStorage.getItem("ta-tema")) === "acik") document.documentElement.dataset.tema = "acik"; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#anasayfa" aria-label="Türler Atlası">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 3c-5 4-8 8.5-8 13a8 8 0 0 0 7 7.9V29h2v-5.1A8 8 0 0 0 24 16c0-4.5-3-9-8-13z"/></svg>
+      </span>
+      <span>Türler <em>Atlası</em></span>
+    </a>
+    <nav class="cats" id="cats" aria-label="Kategoriler"></nav>
+    <div class="araclar" id="araclar"></div>
+  </header>
+
+  <main id="app"></main>
+
+  <dialog class="modal" id="modal" aria-labelledby="m-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Kapat">&times;</button>
+    <div class="modal-body" id="modal-body"></div>
+  </dialog>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="data/agaclar.js"></script>
+  <script src="data/cicekler.js"></script>
+  <script src="data/kediler.js"></script>
+  <script src="data/kopekler.js"></script>
+  <script src="data/kuslar.js"></script>
+  <script src="data/memeliler.js"></script>
+  <script src="data/deniz.js"></script>
+  <script src="data/bocekler.js"></script>
+  <script src="data/surungenler.js"></script>
+  <script src="data/en.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
